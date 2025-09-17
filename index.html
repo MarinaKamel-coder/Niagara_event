@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎆 Visite des Chutes du Niagara</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo1.png" alt="Logo Visite Niagara">
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="pages_fr/programme.html">Programme</a></li>
+            <li><a href="pages_fr/inscription.html">Inscription</a></li>
+            <li><a href="pages_fr/galerie.html">Galerie</a></li>
+            <li><a href="pages_fr/infos.html">info</a></li>
+            <li class="lang-switch"><a href="index/index_en.html" title="English version"> 🌐EN/FR </a></li>
+        </ul>
+    </nav>
+    
+</header>
+<main>
+<audio autoplay loop id="backgroundAudio">
+    <source src="media/waterfal.mp3" type="audio/mpeg">
+    Votre navigateur ne supporte pas l’audio.
+</audio>
+<section class="banniere">
+    <video autoplay muted loop id="video-bg">
+        <source src="media/logo.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="banniere-content">
+        <h1>Visite des Chutes du Niagara</h1>
+        
+    </div>
+</section>
+<section class="para">
+    
+    <p> Les attractions de <strong> Niagara Falls</strong>, au Canada, vous offrent une expérience authentique en Ontario.
+         Embarquez pour <strong>une croisière</strong>  dans la ville de Niagara le matin et embarquez pour <strong>Whirlpool Aero Car</strong>  l'après-midi. 
+         Promenez-vous dans les jardins botaniques  ou testez votre courage sur la tyrolienne WildPlay jusqu'aux chutes. 
+         Visitez la tour Skylon pour une vue imprenable à 360 degrés. Le spectacle de magie du Greg Frewin Theatre émerveillera petits et grands. 
+         Réveillez l'amateur de sensations fortes qui sommeille en vous avec Whirlpool Jetboats , Nightmares Fear Factory ou Niagara Free Fall . 
+         Il y a tant de choses à faire à Niagara Falls pour le plaisir et l'aventure ! 
+    </p>
+  <section class="invitation">
+    <h3>🎤 Invitation spéciale</h3>
+    <p>Cliquez sur le bouton ci-dessous pour écouter notre message d’accueil.</p>
+
+    <button id="playPauseBtn">▶️ Écouter</button>
+    <audio id="invitation-audio">
+        <source src="media/invitation_fr.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l’audio.
+    </audio>
+</section>
+
+    <section class="propos">
+    <h3>À propos de cet événement</h3>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-calendar-check"> 📅 </i>
+            <h4>Annulation gratuite</h4>
+            <p>Annulation jusqu’à 24 heures à l’avance pour un remboursement intégral.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-credit-card"> 💳 </i>
+            <h4>Réservez maintenant, payez plus tard</h4>
+            <p>Restez flexible : réservez votre place sans rien payer aujourd'hui.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-clock">&#128345;</i>
+            <h4>Durée 10 heures</h4>
+            <p>Vérifiez les disponibilités pour voir les heures de début.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-language">🌎</i>
+            <h4>Guide</h4>
+            <p>Disponible en Français & Anglais.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+<script>
+    const audio_1 = document.getElementById('backgroundAudio');
+          audio_1.volume = 0.02; 
+    const audio_2 = document.getElementById("invitation-audio");
+    const btn = document.getElementById("playPauseBtn");
+
+    btn.addEventListener("click", () => {
+        if (audio_2.paused) {
+            audio_2.play();
+            btn.textContent = "⏸️ Pause";
+        } else {
+            audio_2.pause();
+            btn.textContent = "▶️ Écouter";
+        }
+    });
+    audio_2.addEventListener("ended", () => {
+        btn.textContent = "▶️ Écouter";
+    });
+
+</script>
+</body>
+</html>

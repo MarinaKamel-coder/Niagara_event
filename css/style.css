@@ -1,0 +1,714 @@
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap');
+
+/* ===== Global ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   background: linear-gradient(135deg, #ecf1f2, #84b5c7);
+    width: 100%;
+}
+
+
+
+/* ===== Header & Navigation ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #276b80;
+    box-shadow: 0 2px 5px rgb(245, 167, 50);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: white;
+    width: 100%;
+}
+
+header .logo img {
+    width: 60px;
+    padding: 5px;
+    
+}
+.nav{
+    flex-grow: 1;
+   
+}
+
+
+.nav ul {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 50px;
+    padding: 0 30px;
+    margin: 0;
+   
+}
+
+.nav a {
+    text-decoration: none;
+    color: #efa759;
+    font-size: larger;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #fff;
+    background-color: #12396b;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.nav .active {
+    color: rgb(239, 241, 197);
+    font-weight: bold;
+}
+
+.nav .lang-switch a {
+    color: #57c3f5;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.nav .lang-switch a:hover {
+    color: #f3924d;
+    background: none;
+    transform: scale(1.05);
+}
+
+.banniere {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#video-bg {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(100%); 
+   
+}
+
+.banniere-content {
+    position: relative;
+    z-index: 2;
+    color: #ff950b;
+    font-family: 'Lobster', cursive;
+    padding-left: 5px;
+}
+.para{
+    font-style: oblique;
+    font-size: 20px;
+    color: #105570;
+    padding: 10px 95px 0 95px;
+}
+/* Section invitation */
+.invitation {
+    text-align: center;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgb(82, 147, 173);
+    box-shadow: 0 6px 15px rgb(129, 58, 7);
+    border-radius: 20px;
+    max-width: 600px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.invitation:hover {
+    transform: translateY(-5px);
+}
+
+.invitation h3 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: #f59958;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.invitation p {
+    font-size: 17px;
+    color: #cdcdcd;
+    margin-bottom: 20px;
+}
+
+/* Bouton play/pause */
+#playPauseBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ecf1f2, #84b5c7);
+    color: rgb(4, 5, 60);
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+#playPauseBtn:hover {
+    background: linear-gradient(135deg, #0099cc, #0056b3);
+    transform: scale(1.07);
+    color: white;
+}
+
+#playPauseBtn:active {
+    transform: scale(0.95);
+}
+.propos {
+    padding: 40px 20px;
+    background: rgb(71, 129, 152);
+    box-shadow: 0 3px 10px rgb(17, 113, 124);
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.propos h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #0630ba;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgb(224, 242, 245);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(241, 94, 9, 0.644);
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    margin: 10px 0;
+    color: #1887b3d2;
+    font-size: 20px;
+}
+
+.card p {
+    color: #8b9099e4;
+    font-size: 16px;
+}
+
+/* ===== Media ===== */
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.program h2{
+   color: #094c75;
+   font-family: 'Lobster', cursive;
+   padding-left: 20px;
+   font-size: 30px;
+}
+.program p{
+    padding-left: 25px;
+    font-size: 17px;
+}
+#proplayPauseBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #759fb8, #3f97b4);
+    color: rgb(255, 255, 254);
+    border: none;
+    padding: 6px 20px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+#proplayPauseBtn:hover {
+    background: rgba(196, 130, 85, 0.781);
+    transform: scale(1.07);
+}
+
+#proplayPauseBtn:active {
+    transform: scale(0.95);
+}
+
+/* ===== Tables ===== */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 30px;
+    border: solid #6d4023;
+    font-size: 18px;
+    margin-left: 60px ;
+}
+table th {
+    background-color: #ca8e4a;
+    color: #135864;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #6d4023;
+    font-size: 22px;
+}
+ table td {
+    padding: 10px;
+    border: 1px solid #333;
+    color: #07659b;
+}
+
+tbody.bloc {
+  border: 2px solid #6d4023; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+  display: table-row-group; 
+}
+
+tbody.bloc:nth-of-type(odd) td {
+    background-color: rgba(148, 195, 195, 0.653);
+}
+
+tbody.bloc:nth-of-type(even) td {
+    background-color: rgba(109, 154, 158, 0.315);
+}
+
+
+tbody.bloc:hover td {
+  background-color: #276b80;;
+  color: #fff;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.images {
+    position: relative;
+    width: 200px;   
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.images:hover .overlay-img {
+    opacity: 1;
+}
+
+
+.guideimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+.reserve h2{
+    padding-left: 20px;
+    color: #051258;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.reserve p{
+    padding-left: 20px;
+    color: #0a17d6ed;
+    font-size: 18px;
+}
+
+/* ===== Formulaire inscription ===== */
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+}
+
+.form-inscription {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #a0c9e2;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(216, 130, 37, 0.9);
+  color: #105ae6;
+  font-size: 16px;
+}
+
+
+.form-inscription fieldset {
+  border: 1px solid #305a87;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.274);
+}
+
+.form-inscription legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #cc780a;
+}
+
+
+.form-inscription label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 500;
+}
+
+
+.form-inscription input,
+.form-inscription select,
+.form-inscription textarea {
+  width: 95%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  font-size: 15px;
+  background: #ffffff;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.form-inscription input:focus,
+.form-inscription select:focus,
+.form-inscription textarea:focus {
+  border: 1px solid #ffae42;
+  box-shadow: 0 0 6px rgba(255, 174, 66, 0.7);
+  outline: none;
+}
+
+
+
+.form-inscription .options-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 12px 0;
+}
+
+.form-inscription .options-inline label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.form-inscription .options-inline input {
+  margin-right: 8px;
+  width: auto;
+}
+
+
+.form-inscription .inline {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.form-inscription .inline input {
+  margin-right: 8px;
+  width: auto;
+}
+
+
+/* Paiement */
+.paiement .pay-option {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  align-items: center;
+  gap: 10px 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.15);
+}
+.paiement .pay-option:last-child { border-bottom: none; }
+
+.paiement .pay-option input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.paiement .pay-option label {
+  margin: 0; 
+  cursor: pointer;
+}
+
+
+.paiement .credit-info {
+  grid-column: 1 / -1;
+  display: none;
+  margin-top: 6px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  color: #333;
+}
+
+
+.paiement .pay-option input[type="radio"]:checked ~ .credit-info {
+  display: block;
+}
+
+
+.paiement .credit-info .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+.form-inscription button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 12px 30px;
+  font-size: 18px;
+  background: #f0a23b;
+  color: #11274e;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-inscription button:hover {
+  background: #c17109;
+  color: #fff;
+}
+
+
+/* ===== Galerie ===== */
+.galerie {
+  
+    text-align: center;
+}
+
+.galerie h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    color: #ff7a18;
+    font-family: 'Lobster', cursive;
+    
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+}
+
+.galerie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.galerie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    
+}
+
+.galerie-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.galerie-card:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #ffa444;
+    background-color: #08243b75;
+}
+
+.overlay p {
+    font-size: 16px;
+    color: #f0f0f0;
+    background-color: #08243b75;
+}
+
+/* ===== FAQ ===== */
+
+.map{
+    width: 99%;
+    height: 350px;
+    border: 0;
+    padding: 10px;
+    
+}
+.faq details {
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px;
+            background: #f9f9f9;
+            width: 80%;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-weight: bold;
+            list-style: none; /* retire la flèche par défaut */
+            color: #0a0c33;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none; /* retire la flèche sur Chrome */
+        }
+
+        /* Petite icône + rotation à l’ouverture */
+        .faq summary::before {
+            content: "➕ ";
+            margin-right: 6px;
+            color: #444;
+            transition: transform 0.3s;
+            
+        }
+
+        details[open] summary::before {
+            content: "➖ ";
+            color: #d9534f;
+            
+        }
+
+        .faq .reponse {
+            margin-top: 8px;
+            padding-left: 20px;
+            color: rgb(6, 57, 210);
+            background-color: #98caf1;
+            width: 60%;
+        }
+.location h2{
+    color: #ff7a18;
+    font-family: 'Lobster', cursive;
+    padding-left: 20px;
+    font-size: 24px;
+}
+.location h3{
+    color: #e71c7e;
+    padding-left: 20px;
+    
+}
+
+.contact p{
+    color:#031e63;
+    padding-left: 10px;
+    font-size: large;
+}
+.contact  a{
+    color:#0a2c60;
+    padding-left: 10px;
+    
+}
+.contact a:hover{
+    background-color: #07659b;
+    color: #eaebf0;
+    
+}
+
+.liens-utiles ul,a{
+    color:#0e6cc4;
+    font-weight: bold;
+    font-size: 19px;
+}
+ .liens-utiles a:hover{
+    background-color: #043e80;
+    color:#eaebf0;
+}
+.links{
+    padding-top: 10px;
+   
+}

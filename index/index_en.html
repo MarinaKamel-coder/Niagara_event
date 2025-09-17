@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎆 Visit Niagara Falls</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo1.png" alt="Niagara Visit Logo">
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index_en.html" class="active">Home</a></li>
+            <li><a href="../pages_en/program.html">Program</a></li>
+            <li><a href="../pages_en/registration.html">Registration</a></li>
+            <li><a href="../pages_en/gallery.html">Gallery</a></li>
+            <li><a href="../pages_en/information.html">Info</a></li>
+            <li class="lang-switch"><a href="../index_fr.html" title="Version française"> 🌐EN/FR </a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+<audio autoplay loop id="backgroundAudio">
+    <source src="../media/waterfal.mp3" type="audio/mpeg">
+       Votre navigateur ne supporte pas l’audio.
+</audio>    
+<section class="banniere">
+    <video autoplay muted loop id="video-bg">
+        <source src="../media/logo.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+    <div class="banniere-content">
+        <h1>Visit Niagara Falls</h1>
+    </div>
+</section>
+
+<section class="para">
+    <p>
+        The attractions of <strong>Niagara Falls</strong>, Canada, offer you an authentic Ontario experience.  
+        Take a <strong>morning cruise</strong> in Niagara City and enjoy the <strong>Whirlpool Aero Car</strong> in the afternoon.  
+        Stroll through the botanical gardens or test your courage on the WildPlay Zipline to the Falls.  
+        Visit the Skylon Tower for a breathtaking 360-degree view.  
+        The Greg Frewin Theatre magic show will amaze both young and old.  
+        Awaken the thrill seeker in you with Whirlpool Jetboats, Nightmares Fear Factory, or Niagara Free Fall.  
+        There are so many things to do in Niagara Falls for fun and adventure!
+    </p>
+</section>
+
+<section class="invitation">
+    <h3>🎤  Special invitation </h3>
+    <p>Click the button below to listen to our welcome message.</p>  
+    
+    <button id="playPauseBtn">▶️ Listen</button>
+    <audio id="invitation-audio">
+        <source src="../media/invitation_en.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+</section>
+
+<section class="propos">
+    <h3>About this event</h3>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-calendar-check"> 📅 </i>
+            <h4>Free cancellation</h4>
+            <p>Cancel up to 24 hours in advance for a full refund.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-credit-card"> 💳 </i>
+            <h4>Book now, pay later</h4>
+            <p>Stay flexible: reserve your spot without paying today.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-clock">&#128345;</i>
+            <h4>Duration 10 hours</h4>
+            <p>Check availability to see starting times.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-language">🌎</i>
+            <h4>Guide</h4>
+            <p>Available in English & French.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+<script>
+     const audio_1 = document.getElementById('backgroundAudio');
+    audio_1.volume = 0.02; 
+    const audio_2 = document.getElementById("invitation-audio");
+    const btn = document.getElementById("playPauseBtn");
+
+    btn.addEventListener("click", () => {
+        if (audio_2.paused) {
+            audio_2.play();
+            btn.textContent = "⏸️ Pause";
+        } else {
+            audio_2.pause();
+            btn.textContent = "▶️ Listen";
+        }
+    });
+
+    
+    audio_2.addEventListener("ended", () => {
+        btn.textContent = "▶️ Listen";
+    });
+</script>
+</body>
+</html>

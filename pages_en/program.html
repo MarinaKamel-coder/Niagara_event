@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Program - Niagara Falls</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo1.png" alt="Logo Visit Niagara">
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index/index_en.html">Home</a></li>
+            <li><a href="program.html" class="active">Program</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="information.html">Info</a></li>
+            <li class="lang-switch"><a href="../index.html" title="Version française"> 🌐EN/FR </a></li>
+        </ul>
+    </nav>
+   
+</header>
+
+<section class="program"> 
+    <h2>Activity Program</h2> 
+    <P> To listen to our program click on this button 👉 
+        <button id="proplayPauseBtn">▶️ Écouter</button> 
+    </P>
+    
+     <audio id="program-audio">
+        <source src="../media/program_en.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l’audio.
+    </audio> 
+</section>
+
+<table>
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Location</th>
+            <th>Guide</th>
+            <th>Photo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ACTIVITY 10:00 -->
+        <tbody class="bloc">
+            <tr>
+                <td>10:00</td>
+                <td>Welcome & Coffee</td>
+                <td>Reception Area</td>
+                <td rowspan="3" class="animateur">Diane Martin</td>
+                <td rowspan="3" class="images">
+                    <div class="img-container">
+                        <img src="../images/diane.jpg" alt="Diane Martin" class="guideimg">
+                        <div class="overlay-img">
+                            <p>Diane is a 5-star tour guide who loves showing off Niagara Falls!</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>10:30</td>
+                <td>Welcome Speech</td>
+                <td>Hall</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>Falls Observation</td>
+                <td>Niagara Falls</td>
+            </tr>
+        </tbody>
+        <!-- ACTIVITY Noon -->
+        <tbody class="bloc">
+            <tr>
+                <td>12:00</td>
+                <td>Maid of the Mist Cruise</td>
+                <td>Niagara City Cruises</td>
+                <td rowspan="3" class="animateur">Super Dave</td>
+                <td rowspan="3" class="images">
+                    <div class="img-container">
+                        <img src="../images/dave.jpg" alt="Super Dave" class="guideimg">
+                        <div class="overlay-img">
+                            <p>Super Dave is one of the top tour guides, loved by all visitors.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>1:15 PM</td>
+                <td>WildPlay Zipline to the Falls</td>
+                <td>Zipline Area</td>
+            </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>Lunch</td>
+                <td>Restaurant of your choice</td>
+            </tr>
+        </tbody>
+        <!-- ACTIVITY 3:00 -->
+        <tbody class="bloc">
+            <tr>
+                <td>3:00 PM</td>
+                <td>Climb the Skylon Tower</td>
+                <td>Skylon Tower</td>
+                <td rowspan="3" class="animateur">Katie</td>
+                <td rowspan="3" class="images">
+                    <div class="img-container">
+                        <img src="../images/katie.jpg" alt="Katie" class="guideimg">
+                        <div class="overlay-img">
+                            <p>Katie loves sharing the rich history and hidden stories of Niagara Falls.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>4:00 PM</td>
+                <td>Free Activities</td>
+                <td>Free Time</td>
+            </tr>
+            <tr>
+                <td>6:00 PM</td>
+                <td>Whirlpool Aero Car Ride</td>
+                <td>Whirlpool Aero Car</td>
+            </tr>
+        </tbody>
+        <!-- ACTIVITY 7:00 -->
+        <tbody class="bloc">
+            <tr>
+                <td>7:00 PM</td>
+                <td>Scenic Butterflies</td>
+                <td>Butterfly Conservatory</td>
+                <td rowspan="3" class="animateur">Terry Tremblay</td>
+                <td rowspan="3" class="images">
+                    <div class="img-container">
+                        <img src="../images/terry.jpg" alt="Terry Tremblay" class="guideimg">
+                        <div class="overlay-img">
+                            <p>Terry loves sharing his knowledge of Niagara's early years.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>8:00 PM</td>
+                <td>Dinner</td>
+                <td>Restaurant of your choice</td>
+            </tr>
+            <tr>
+                <td>8:45 PM</td>
+                <td>Souvenir Photo</td>
+                <td>Niagara Falls</td>
+            </tr>
+        </tbody>
+        <!-- ACTIVITY 9:00 -->
+        <tbody class="bloc">
+            <tr>
+                <td>9:00 PM</td>
+                <td>Fireworks over the Falls</td>
+                <td>Niagara Falls</td>
+                <td rowspan="3" class="animateur">Bernie Boucher</td>
+                <td rowspan="3" class="images">
+                    <div class="img-container">
+                        <img src="../images/bernie.jpg" alt="Bernie Boucher" class="guideimg">
+                        <div class="overlay-img">
+                            <p>Bernie brings her wealth of experience to Niagara Falls tours.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>9:30 PM</td>
+                <td>Gathering for Departure</td>
+                <td>Reception Area</td>
+            </tr>
+            <tr>
+                <td>10:00 PM</td>
+                <td>Closing Speech & Souvenir Distribution</td>
+                <td>Hall</td>
+            </tr>
+        </tbody>
+    </tbody>
+</table>
+<script>
+    const audio = document.getElementById("program-audio");
+    const btn = document.getElementById("proplayPauseBtn");
+
+    btn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            btn.textContent = "⏸️ Pause";
+        } else {
+            audio.pause();
+            btn.textContent = "▶️ Écouter";
+        }
+    });
+
+    audio.addEventListener("ended", () => {
+        btn.textContent = "▶️ Écouter";
+    });
+</script>
+</body>
+</html>

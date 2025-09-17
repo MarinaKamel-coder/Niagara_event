@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📧Inscription - Chutes du Niagara</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../images/logo1.png" alt="Logo Visite Niagara">
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="programme.html">Programme</a></li>
+            <li><a href="inscription.html" class="active">Inscription</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="infos.html">Infos </a></li>
+            <li class="lang-switch"><a href="../index/index_en.html" title="English version"> 🌐EN/FR </a></li>
+        </ul>
+    </nav>
+    
+</header>
+<div class="reserve">
+<h2> Réservez votre événement </h2>
+<p> Prêt à réserver votre événement au Centre des congrès de Niagara Falls ? 
+    Notre équipe est là pour vous aider. <em> Veuillez remplir le formulaire ci-dessous et nous vous répondrons dans les 24 heures ouvrables. </em></br>
+    <strong> Nous sommes impatients de vous aider à organiser un événement réussi à Niagara Falls, au Canada. </strong> </br>
+    </p>
+</div>
+<form id="registrationForm" action="#" method="post" enctype="multipart/form-data" class="form-inscription">
+    <fieldset>
+        <legend>Informations personnelles</legend>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+   
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+        <span class="error-msg" id="emailError">Format de courriel non valide</span>
+
+        <label for="tel">Téléphone :</label>
+        <input type="tel" id="tel" name="tel" placeholder="(123) 456-7890" required>
+        <span class="error-msg" id="telError">Format de téléphone non valide</span>
+
+        <label for="dateNaissance">Date de naissance :</label>
+        <input type="date" id="dateNaissance" name="dateNaissance"  max="2007-09-01" required>
+        <span class="error-msg" id="dobError"> Vous devez avoir 18 ans ou plus</span>
+
+         <label for="pays">Pays :</label>
+        <input list="paysList" id="pays" name="pays" required>
+        <datalist id="paysList">
+            <option value="Canada">
+            <option value="USA">
+            <option value="Autre">   
+        </datalist>
+
+        <label>Sexe :</label>
+        <div class="options-inline">
+        <label><input type="radio" name="sexe" value="H" required> Homme </label>
+        <label><input type="radio" name="sexe" value="F" required> Femme </label>
+        <label><input type="radio" name="sexe" value="A" required> Autre </label>
+        </div>
+       
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Nombre de participants</legend>
+        <label for="adultes">Adultes (50$ chacun) :</label>
+        <input type="number" id="adultes" name="adultes" min="1" value="1">
+
+        <label for="enfants">Enfants de plus de 5 ans (30$ chacun) :</label>
+        <input type="number" id="enfants" name="enfants" min="0" value="0">
+
+        <label for="bebe">Enfants de moins de 5 ans (Gratuit) :</label>
+        <input type="number" id="bebe" name="bebe" min="0" value="0">
+    </fieldset>    
+     <fieldset> 
+        <legend>Choix des activités :</legend>
+        
+        <div class="options-inline">
+        <label><input type="checkbox" name="activites" value="Croisière"> Croisière 35$ </label>
+        <label><input type="checkbox" name="activites" value="Niagara Zipline"> Niagara Zipline 60$</label>
+        <label><input type="checkbox" name="activites" value="tour Skylon"> La tour Skylon 15$ </label>
+        <label><input type="checkbox" name="activites" value="Niagara SkyWheel"> Niagara SkyWheel 20$</label>
+        <label><input type="checkbox" name="activites" value="Whirlpool Aero Car"> Whirlpool Aero Car 15$</label>
+        <label><input type="checkbox" name="activites" value="Butterfly Conservatory"> Butterfly Conservatory 30$</label>
+        <label><input type="checkbox" name="activites" value="Photo souvenir"> Photo souvenir 15$ </label>
+        
+        </div>
+    </fieldset>
+
+    <fieldset class="paiement">
+  <legend>Paiement</legend>
+
+  <div class="pay-option">
+    <input type="radio" id="pay-credit" name="paiement" value="credit" required>
+    <label for="pay-credit">Carte de crédit</label>
+
+    <!-- Affiché uniquement quand "Carte de crédit" est coché -->
+    <div class="credit-info">
+      <label for="cc-num">Numéro de carte</label>
+      <input id="cc-num" name="cc-num" type="text"
+             inputmode="numeric" pattern="[0-9\s]{13,19}"
+             placeholder="123 567 9012">
+
+      <div class="grid">
+        <div>
+          <label for="cc-exp">Date d’expiration</label>
+          <input id="cc-exp" name="cc-exp" type="month">
+        </div>
+        <div>
+          <label for="cc-cvv">CVV</label>
+          <input id="cc-cvv" name="cc-cvv" type="text" maxlength="4" pattern="\d{3,4}" placeholder="123">
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="pay-option">
+    <input type="radio" id="pay-cash" name="paiement" value="cash">
+    <label for="pay-cash">En espèces sur place</label>
+  </div>
+</fieldset>
+
+<fieldset>
+        <label for="photo">Photo : (Optionnel)</label>
+        <input type="file" id="photo" name="photo">
+    </fieldset>
+
+    <fieldset>
+        <legend>Commentaires</legend>
+        <textarea name="commentaires" placeholder="Vos suggestions..."></textarea> </br>
+        <label class="inline"> <input type="checkbox" name="conditions" id="conditions"> J'accepte les conditions d'utilisation</label>
+        
+        
+    </fieldset>
+
+    <button id="submitBtn" type="submit">Valider l'inscription</button>
+</form>
+<script>
+const form = document.getElementById('registrationForm');
+const submitBtn = document.getElementById('submitBtn');
+
+const telInput = document.getElementById('tel');
+const emailInput = document.getElementById('email');
+const dobInput = document.getElementById('dateNaissance');
+const conditionsInput = document.getElementById('conditions');
+
+const telError = document.getElementById('telError');
+const emailError = document.getElementById('emailError');
+const dobError = document.getElementById('dobError');
+
+// Regex
+const phoneRegex = /^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+// Désactive le bouton au départ
+submitBtn.disabled = true;
+
+// Validation Phone
+function validatePhone() {
+    const valid = phoneRegex.test(telInput.value);
+    telError.style.display = valid ? 'none' : 'inline';
+    return valid;
+}
+
+// Validation Email
+function validateEmail() {
+    const valid = emailRegex.test(emailInput.value);
+    emailError.style.display = valid ? 'none' : 'inline';
+    return valid;
+}
+
+// Validation Date de naissance (≥18 ans)
+function validateDOB() {
+    if (!dateRegex.test(dobInput.value)) {
+        dobError.style.display = 'inline';
+        return false;
+    }
+  
+    const dob = new Date(dobInput.value);
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const m = today.getMonth() - dob.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+    const valid = age >= 18;
+    dobError.style.display = valid ? 'none' : 'inline';
+    return valid;
+}
+
+// Vérification globale
+function checkForm() {
+    const isValid = validatePhone() && validateEmail() && validateDOB() && conditionsInput.checked;
+    submitBtn.disabled = !isValid;
+}
+
+// Events
+telInput.addEventListener('input', checkForm);
+emailInput.addEventListener('input', checkForm);
+dobInput.addEventListener('input', checkForm);
+conditionsInput.addEventListener('change', checkForm);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+    alert('Inscription réussie !');
+    form.reset();
+    submitBtn.disabled = true;
+});
+
+</script>
+</body>
+</html>
