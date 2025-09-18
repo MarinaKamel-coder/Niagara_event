@@ -12,6 +12,13 @@
     <div class="logo">
         <img src="../images/logo1.png" alt="Logo Visit Niagara">
     </div>
+        </div>
+    <!-- Burger icon -->
+         <div class="burger" id="burger">
+             <span></span>
+             <span></span>
+             <span></span>
+         </div>
     <nav class="nav">
         <ul>
             <li><a href="../index/index_en.html">Home</a></li>
@@ -186,6 +193,23 @@
     </tbody>
 </table>
 <script>
+const burger = document.getElementById("burger");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  burger.classList.toggle("toggle");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    burger.classList.remove("toggle");
+  });
+});
+
+
     const audio = document.getElementById("program-audio");
     const btn = document.getElementById("proplayPauseBtn");
 

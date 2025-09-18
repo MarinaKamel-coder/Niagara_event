@@ -32,8 +32,33 @@ header .logo img {
     padding: 5px;
     
 }
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #3f2816;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+.burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .nav{
     flex-grow: 1;
+  
    
 }
 
@@ -43,7 +68,7 @@ header .logo img {
     justify-content: right;
     flex-wrap: wrap;
     list-style: none;
-    gap: 50px;
+    gap: 35px;
     padding: 0 30px;
     margin: 0;
    
@@ -629,48 +654,48 @@ tbody.bloc:hover td {
     
 }
 .faq details {
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 10px;
-            margin: 10px;
-            background: #f9f9f9;
-            width: 80%;
-        }
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+    background: #f9f9f9;
+    width: 80%;
+}
 
-        .faq summary {
-            cursor: pointer;
-            font-weight: bold;
-            list-style: none; /* retire la flèche par défaut */
-            color: #0a0c33;
-        }
+.faq summary {
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none; /* retire la flèche par défaut */
+    color: #0a0c33;
+}
 
-        .faq summary::-webkit-details-marker {
-            display: none; /* retire la flèche sur Chrome */
-        }
+.faq summary::-webkit-details-marker {
+    display: none; /* retire la flèche sur Chrome */
+}
 
-        /* Petite icône + rotation à l’ouverture */
-        .faq summary::before {
-            content: "➕ ";
-            margin-right: 6px;
-            color: #444;
-            transition: transform 0.3s;
-            
-        }
+/* Petite icône + rotation à l’ouverture */
+.faq summary::before {
+    content: "➕ ";
+    margin-right: 6px;
+    color: #444;
+    transition: transform 0.3s;
+    
+}
 
-        details[open] summary::before {
-            content: "➖ ";
-            color: #d9534f;
-            
-        }
+details[open] summary::before {
+    content: "➖ ";
+    color: #d9534f;
+    
+}
 
-        .faq .reponse {
-            margin-top: 8px;
-            padding-left: 20px;
-            color: rgb(6, 57, 210);
-            background-color: #98caf1;
-            width: 60%;
-        }
+.faq .reponse {
+    margin-top: 8px;
+    padding-left: 20px;
+    color: rgb(6, 57, 210);
+    background-color: #98caf1;
+    width: 60%;
+}
 .location h2{
     color: #ff7a18;
     font-family: 'Lobster', cursive;
@@ -712,3 +737,148 @@ tbody.bloc:hover td {
     padding-top: 10px;
    
 }
+
+
+/* Mobile */
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+    * {
+  box-sizing: border-box; /* toutes les largeurs incluent padding et border */
+}
+  /* Header */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Vidéo bannière recentrée */
+  #video-bg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Cartes et galerie en 1 colonne */
+ .cards {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 colonne */
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; 
+
+}
+  .galerie-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Tableaux scrollables */
+  table {
+    
+    display: block;
+    overflow-x: auto; /* permet scroll horizontal */
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+
+  table thead {
+    display: table-header-group; /* conserve l’en-tête */
+    background-color: #ca8e4a;
+    color: #135864;
+    font-size: 16px;
+  }
+
+  table tr {
+    display: table-row; /* conserve l’apparence normale */
+    border-bottom: 1px solid #ccc;
+  }
+
+  table td {
+    display: table-cell; /* cellule normale */
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* pas de retour à la ligne automatique */
+  }
+
+  table {
+    -webkit-overflow-scrolling: touch; /* scroll fluide iOS */
+  }
+
+  /* Carte Google */
+  .map {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Formulaire inscription */
+  .form-inscription {
+    padding: 15px;
+  }
+
+  .form-inscription input,
+  .form-inscription select,
+  .form-inscription textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-inscription fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .options-inline {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Menu burger */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #276b80b9;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+}
+
+

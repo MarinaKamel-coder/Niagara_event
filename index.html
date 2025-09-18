@@ -12,7 +12,13 @@
     <div class="logo">
         <img src="images/logo1.png" alt="Logo Visite Niagara">
     </div>
-    <nav class="nav">
+    <!-- Burger icon -->
+         <div class="burger" id="burger">
+             <span></span>
+             <span></span>
+             <span></span>
+         </div>
+    <nav class="nav" id="navMenu">
         <ul>
             <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="pages_fr/programme.html">Programme</a></li>
@@ -87,11 +93,28 @@
 
 </main>
 <script>
+const burger = document.getElementById("burger");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  burger.classList.toggle("toggle");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    burger.classList.remove("toggle");
+  });
+});
+
+
     const audio_1 = document.getElementById('backgroundAudio');
           audio_1.volume = 0.02; 
+
     const audio_2 = document.getElementById("invitation-audio");
     const btn = document.getElementById("playPauseBtn");
-
     btn.addEventListener("click", () => {
         if (audio_2.paused) {
             audio_2.play();
